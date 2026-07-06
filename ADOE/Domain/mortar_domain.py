@@ -17,7 +17,7 @@ curing_temp = ContinuousInput(key="curing_temp", bounds=(4.5, 22.0))            
 fine_aggregate = ContinuousInput(key="fine_aggregate", bounds=(1233, 2357))      # kg/m3
 curing_age_days = DiscreteInput(key="curing_age_days", values=[1, 3, 5, 28])     # days (multi-fidelity factor)
 
-data_source = CategoricalInput(key="data_source", categories=["BOxCrete_UIUC", "OurLab"])
+data_source = CategoricalInput(key="data_source", categories=["BOxCrete_UIUC", "OurLab"]) #*******Decide what the sources should be called*****
 
 # Response: compressive strength in psi (native dataset unit)
 f_c_psi = ContinuousOutput(key="f_c_psi", objective=MaximizeObjective(w=1.0))
