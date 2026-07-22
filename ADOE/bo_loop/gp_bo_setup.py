@@ -17,7 +17,7 @@ experiments = pd.read_csv(
 )
 
 # Log-time transformation
-experiments["log_curing_age"] = np.log(experiments["curing_age_days"])
+experiments["log_curing_age"] = np.log(experiments["curing_age_days"]) # Make sure that the model understands the logarithmic response of concrete hydration
 
 # Build the surrogate
 surrogate_data_model = MixedSingleTaskGPSurrogate(
